@@ -11,9 +11,9 @@ var pieces = [{}];
 //count to next piece
 //count of could move to sqaures
 //could move to square
-//count of interviening sqaure
-//interviening square
-//next interviening sqaure...
+//count of intervening sqaure
+//intervening square
+//next intervening sqaure...
 //next could move to square...
 
 
@@ -29,27 +29,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 3,
-                        interviening: [2]
+                        intervening: [2]
                     },
                     {
                         square: 4,
-                        interviening: [2, 3]
+                        intervening: [2, 3]
                     },
                     {
                         square: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 9,
-                        interviening: [5]
+                        intervening: [5]
                     },
                     {
                         square: 13,
-                        interviening: [5, 9]
+                        intervening: [5, 9]
                     },
                 ]
             },
@@ -58,15 +58,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 6,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 11,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         number: 16,
-                        interviening: [6, 11]
+                        intervening: [6, 11]
                     }
                 ]
             },
@@ -75,11 +75,11 @@ squares = [
                 couldGoTo: [
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -88,15 +88,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 4,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -109,27 +109,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 3,
-                        interviening: [2]
+                        intervening: [2]
                     },
                     {
                         square: 4,
-                        interviening: [2, 3]
+                        intervening: [2, 3]
                     },
                     {
                         square: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 9,
-                        interviening: [5]
+                        intervening: [5]
                     },
                     {
                         square: 13,
-                        interviening: [5, 9]
+                        intervening: [5, 9]
                     },
                 ]
             },
@@ -138,15 +138,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 6,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 11,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         number: 16,
-                        interviening: [6, 11]
+                        intervening: [6, 11]
                     }
                 ]
             },
@@ -155,11 +155,11 @@ squares = [
                 couldGoTo: [
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -168,15 +168,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 4,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -194,27 +194,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 3,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 4,
-                        interviening: [3]
+                        intervening: [3]
                     },
                     {
                         square: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 10,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         square: 14,
-                        interviening: [6, 10]
+                        intervening: [6, 10]
                     },
 
                 ]
@@ -224,15 +224,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 5,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 7,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 12,
-                        interviening: [7]
+                        intervening: [7]
                     }
                 ]
             },
@@ -241,15 +241,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 12,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -258,23 +258,23 @@ squares = [
                 couldGoTo: [
                     {
                         number: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 3,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -287,27 +287,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 3,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 4,
-                        interviening: [3]
+                        intervening: [3]
                     },
                     {
                         square: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 10,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         square: 14,
-                        interviening: [6, 10]
+                        intervening: [6, 10]
                     },
 
                 ]
@@ -317,15 +317,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 5,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 7,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 12,
-                        interviening: [7]
+                        intervening: [7]
                     }
                 ]
             },
@@ -334,15 +334,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 12,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -351,23 +351,23 @@ squares = [
                 couldGoTo: [
                     {
                         number: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 3,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -386,27 +386,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 1,
-                        interviening: [2]
+                        intervening: [2]
                     },
                     {
                         square: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 4,
-                        interviening: [3]
+                        intervening: [3]
                     },
                     {
                         square: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 11,
-                        interviening: [7]
+                        intervening: [7]
                     },
                     {
                         square: 15,
-                        interviening: [7, 11]
+                        intervening: [7, 11]
                     },
 
                 ]
@@ -416,15 +416,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 6,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 9,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         number: 8,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -433,15 +433,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 12,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -450,23 +450,23 @@ squares = [
                 couldGoTo: [
                     {
                         number: 2,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 8,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 4,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -479,27 +479,27 @@ squares = [
                 couldGoTo: [
                     {
                         square: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 3,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 4,
-                        interviening: [3]
+                        intervening: [3]
                     },
                     {
                         square: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         square: 10,
-                        interviening: [6]
+                        intervening: [6]
                     },
                     {
                         square: 14,
-                        interviening: [6, 10]
+                        intervening: [6, 10]
                     },
 
                 ]
@@ -509,15 +509,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 5,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 7,
-                        interviening: [0]
+                        intervening: [0]
                     },
                     {
                         number: 12,
-                        interviening: [7]
+                        intervening: [7]
                     }
                 ]
             },
@@ -526,15 +526,15 @@ squares = [
                 couldGoTo: [
                     {
                         number: 12,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 10,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -543,23 +543,23 @@ squares = [
                 couldGoTo: [
                     {
                         number: 1,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 5,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 6,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 7,
-                        interviening: []
+                        intervening: []
                     },
                     {
                         number: 3,
-                        interviening: []
+                        intervening: []
                     }
                 ]
             },
@@ -590,7 +590,7 @@ squares = [
 createPieces(denominations, colours);
 boardStart(startPositions, pieces, board);
 //printPieces((pieces));
-console.log(getIntervieningSquareNumbersArray(1,1,4));
+console.log(getinterveningSquareNumbersArray(1,1,4));
 
 
 
@@ -652,11 +652,11 @@ function getGouldGoToSquareNumbersFromSquarePiece(squarePiece){
     }
     return arr;
 }
-function getIntervieningSquareNumbersArray(pieceNumber, fromSquareNumber, toSquareNumber){
+function getinterveningSquareNumbersArray(pieceNumber, fromSquareNumber, toSquareNumber){
     var fromSquare = getSquareByNumber(fromSquareNumber);
     var squarePiece = getSquarePiecesByNumber(fromSquare,pieceNumber);
     var couldGoTo =  getSquarePieceCouldGotoFromToSquareNumber(squarePiece, toSquareNumber);
-    return couldGoTo.interviening;
+    return couldGoTo.intervening;
 
 }
 
