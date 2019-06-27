@@ -17,572 +17,1533 @@ var pieces = [{}];
 //next could move to square...
 
 
-const couldMoveTos = [
-    1, 21, 1, 19, 6, 2, 0, 3, 1, 2, 4, 2, 3, 5, 0, 9, 1, 5, 13, 2, 5, 9, 2
-]
 squares = [
     {
-        number: 1,
-        pieces: [
+        squareNumber: 1,
+        pieces:[
             {
-                number: 1,
-                couldGoTo: [
+                pieceNumber: 1,
+                destinations: [
                     {
-                        square: 2,
+                        squareNumber: 2,
                         intervening: []
                     },
                     {
-                        square: 3,
+                        squareNumber: 3,
                         intervening: [2]
                     },
                     {
-                        square: 4,
-                        intervening: [2, 3]
-                    },
-                    {
-                        square: 5,
+                        squareNumber: 4,
+                        intervening: [2,3]
+                    }, {
+                        squareNumber: 5,
                         intervening: []
                     },
                     {
-                        square: 9,
+                        squareNumber: 9,
                         intervening: [5]
                     },
                     {
-                        square: 13,
-                        intervening: [5, 9]
-                    },
+                        squareNumber: 13,
+                        intervening: [5,9]
+                    }
                 ]
             },
             {
-                number: 2,
-                couldGoTo: [
+                pieceNumber: 2,
+                destinations: [
                     {
-                        number: 6,
-                        intervening: [0]
+                        squareNumber: 6,
+                        intervening: []
                     },
                     {
-                        number: 11,
+                        squareNumber: 11,
                         intervening: [6]
                     },
                     {
-                        number: 16,
-                        intervening: [6, 11]
+                        squareNumber: 16,
+                        intervening: [6,11]
                     }
                 ]
             },
             {
-                number: 3,
-                couldGoTo: [
+                pieceNumber: 3,
+                destinations: [
                     {
-                        number: 7,
+                        squareNumber: 7,
                         intervening: []
                     },
                     {
-                        number: 10,
-                        intervening: []
-                    }
-                ]
-            },
-            {
-                number: 4,
-                couldGoTo: [
-                    {
-                        number: 2,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 4,
+                        squareNumber: 10,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 5,
-                couldGoTo: []
-            },
-            {
-                number: 6,
-                couldGoTo: [
+                pieceNumber: 4,
+                destinations: [
                     {
-                        square: 2,
+                        squareNumber: 2,
                         intervening: []
                     },
                     {
-                        square: 3,
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 5,
+                destinations: []
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 3,
                         intervening: [2]
                     },
                     {
-                        square: 4,
-                        intervening: [2, 3]
-                    },
-                    {
-                        square: 5,
+                        squareNumber: 4,
+                        intervening: [2,3]
+                    }, {
+                        squareNumber: 5,
                         intervening: []
                     },
                     {
-                        square: 9,
+                        squareNumber: 9,
                         intervening: [5]
                     },
                     {
-                        square: 13,
-                        intervening: [5, 9]
-                    },
+                        squareNumber: 13,
+                        intervening: [5,9]
+                    }
                 ]
             },
             {
-                number: 7,
-                couldGoTo: [
+                pieceNumber: 7,
+                destinations: [
                     {
-                        number: 6,
-                        intervening: [0]
+                        squareNumber: 6,
+                        intervening: []
                     },
                     {
-                        number: 11,
+                        squareNumber: 11,
                         intervening: [6]
                     },
                     {
-                        number: 16,
-                        intervening: [6, 11]
+                        squareNumber: 16,
+                        intervening: [6,11]
                     }
                 ]
             },
             {
-                number: 8,
-                couldGoTo: [
+                pieceNumber: 8,
+                destinations: [
                     {
-                        number: 7,
+                        squareNumber: 7,
                         intervening: []
                     },
                     {
-                        number: 10,
-                        intervening: []
-                    }
-                ]
-            },
-            {
-                number: 9,
-                couldGoTo: [
-                    {
-                        number: 2,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 4,
+                        squareNumber: 10,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 10,
-                couldGoTo: []
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: []
+            },
+        ]
+    },
+    {
+        squareNumber: 2,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 4,
+                        intervening: [3]
+                    }, {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: [6]
+                    },
+                    {
+                        squareNumber: 14,
+                        intervening: [6,10]
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 12,
+                        intervening: [7]
+                    }
+                ]
+            },
+            {
+                pieceNumber: 3,
+                destinations: [
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 11,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 12,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 5
+
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 4,
+                        intervening: [3]
+                    }, {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: [6]
+                    },
+                    {
+                        squareNumber: 14,
+                        intervening: [6,10]
+                    }
+                ]
+            },
+            {
+                pieceNumber: 7,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 12,
+                        intervening: [7]
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 11,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 12,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10
+
             }
         ]
     },
     {
-        number: 2,
-        pieces: [
+        squareNumber: 3,
+        pieces:[
             {
-                number: 1,
-                couldGoTo: [
+                pieceNumber: 1,
+                destinations: [
                     {
-                        square: 1,
-                        intervening: []
-                    },
-                    {
-                        square: 3,
-                        intervening: []
-                    },
-                    {
-                        square: 4,
-                        intervening: [3]
-                    },
-                    {
-                        square: 6,
-                        intervening: []
-                    },
-                    {
-                        square: 10,
-                        intervening: [6]
-                    },
-                    {
-                        square: 14,
-                        intervening: [6, 10]
-                    },
-
-                ]
-            },
-            {
-                number: 2,
-                couldGoTo: [
-                    {
-                        number: 5,
-                        intervening: [0]
-                    },
-                    {
-                        number: 7,
-                        intervening: [0]
-                    },
-                    {
-                        number: 12,
-                        intervening: [7]
-                    }
-                ]
-            },
-            {
-                number: 3,
-                couldGoTo: [
-                    {
-                        number: 12,
-                        intervening: []
-                    },
-                    {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 10,
+                        squareNumber: 1,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 4,
-                couldGoTo: [
+                pieceNumber: 2,
+                destinations: [
                     {
-                        number: 1,
-                        intervening: []
-                    },
-                    {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 7,
-                        intervening: []
-                    },
-                    {
-                        number: 3,
+                        squareNumber: 3,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 5,
-                couldGoTo: []
-            },
-            {
-                number: 6,
-                couldGoTo: [
+                pieceNumber: 4,
+                destinations: [
                     {
-                        square: 1,
-                        intervening: []
-                    },
-                    {
-                        square: 3,
-                        intervening: []
-                    },
-                    {
-                        square: 4,
-                        intervening: [3]
-                    },
-                    {
-                        square: 6,
-                        intervening: []
-                    },
-                    {
-                        square: 10,
-                        intervening: [6]
-                    },
-                    {
-                        square: 14,
-                        intervening: [6, 10]
-                    },
-
-                ]
-            },
-            {
-                number: 7,
-                couldGoTo: [
-                    {
-                        number: 5,
-                        intervening: [0]
-                    },
-                    {
-                        number: 7,
-                        intervening: [0]
-                    },
-                    {
-                        number: 12,
-                        intervening: [7]
-                    }
-                ]
-            },
-            {
-                number: 8,
-                couldGoTo: [
-                    {
-                        number: 12,
-                        intervening: []
-                    },
-                    {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 10,
+                        squareNumber: 5,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 9,
-                couldGoTo: [
+                pieceNumber: 6,
+                destinations: [
                     {
-                        number: 1,
-                        intervening: []
-                    },
-                    {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 7,
-                        intervening: []
-                    },
-                    {
-                        number: 3,
+                        squareNumber: 7,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 10,
-                couldGoTo: []
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
             }
-
         ]
     },
     {
-        number: 3,
-        pieces: [
+        squareNumber: 4,
+        pieces:[
             {
-                number: 1,
-                couldGoTo: [
+                pieceNumber: 1,
+                destinations: [
                     {
-                        square: 1,
-                        intervening: [2]
+                        squareNumber: 1,
+                        intervening: [2,3]
                     },
                     {
-                        square: 2,
-                        intervening: []
-                    },
-                    {
-                        square: 4,
+                        squareNumber: 2,
                         intervening: [3]
                     },
                     {
-                        square: 7,
+                        squareNumber: 3,
                         intervening: []
                     },
                     {
-                        square: 11,
+                        squareNumber: 8,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 12,
+                        intervening: [8]
+                    },
+                    {
+                        squareNumber: 16,
+                        intervening: [8,12]
+                    },
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
                         intervening: [7]
                     },
                     {
-                        square: 15,
-                        intervening: [7, 11]
+                        squareNumber: 13,
+                        intervening: [7,10]
                     },
-
                 ]
             },
             {
-                number: 2,
-                couldGoTo: [
+                pieceNumber: 3,
+                destinations: [
                     {
-                        number: 6,
-                        intervening: [0]
+                        squareNumber: 6,
+                        intervening: []
                     },
                     {
-                        number: 9,
-                        intervening: [6]
-                    },
-                    {
-                        number: 8,
+                        squareNumber: 11,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 3,
-                couldGoTo: [
+                pieceNumber: 4,
+                destinations: [
                     {
-                        number: 5,
+                        squareNumber: 3,
                         intervening: []
                     },
                     {
-                        number: 10,
+                        squareNumber: 7,
                         intervening: []
                     },
                     {
-                        number: 12,
+                        squareNumber: 8,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 4,
-                couldGoTo: [
-                    {
-                        number: 2,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 7,
-                        intervening: []
-                    },
-                    {
-                        number: 8,
-                        intervening: []
-                    },
-                    {
-                        number: 4,
-                        intervening: []
-                    }
-                ]
+                pieceNumber: 5
             },
             {
-                number: 5,
-                couldGoTo: []
-            },
-            {
-                number: 6,
-                couldGoTo: [
+                pieceNumber: 6,
+                destinations: [
                     {
-                        square: 1,
-                        intervening: []
+                        squareNumber: 1,
+                        intervening: [2,3]
                     },
                     {
-                        square: 3,
-                        intervening: []
-                    },
-                    {
-                        square: 4,
+                        squareNumber: 2,
                         intervening: [3]
                     },
                     {
-                        square: 6,
+                        squareNumber: 3,
                         intervening: []
                     },
                     {
-                        square: 10,
-                        intervening: [6]
+                        squareNumber: 8,
+                        intervening: []
                     },
                     {
-                        square: 14,
-                        intervening: [6, 10]
+                        squareNumber: 12,
+                        intervening: [8]
                     },
-
+                    {
+                        squareNumber: 16,
+                        intervening: [8,12]
+                    },
                 ]
             },
             {
-                number: 7,
-                couldGoTo: [
+                pieceNumber: 7,
+                destinations: [
                     {
-                        number: 5,
-                        intervening: [0]
+                        squareNumber: 7,
+                        intervening: []
                     },
                     {
-                        number: 7,
-                        intervening: [0]
-                    },
-                    {
-                        number: 12,
+                        squareNumber: 10,
                         intervening: [7]
-                    }
+                    },
+                    {
+                        squareNumber: 13,
+                        intervening: [7,10]
+                    },
                 ]
             },
             {
-                number: 8,
-                couldGoTo: [
+                pieceNumber: 8,
+                destinations: [
                     {
-                        number: 12,
+                        squareNumber: 6,
                         intervening: []
                     },
                     {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 10,
-                        intervening: []
-                    }
-                ]
-            },
-            {
-                number: 9,
-                couldGoTo: [
-                    {
-                        number: 1,
-                        intervening: []
-                    },
-                    {
-                        number: 5,
-                        intervening: []
-                    },
-                    {
-                        number: 6,
-                        intervening: []
-                    },
-                    {
-                        number: 7,
-                        intervening: []
-                    },
-                    {
-                        number: 3,
+                        squareNumber: 11,
                         intervening: []
                     }
                 ]
             },
             {
-                number: 10,
-                couldGoTo: []
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 8,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10
             }
-
         ]
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+        squareNumber: 5,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    },
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 15,
+                        intervening: [10]
+                    },
+                ]
+            },
+            {
+                pieceNumber: 3,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 11,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 14,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 5,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },{
+                        squareNumber: 2,
+                        ifCapturing: 2
+                    }
+                ]
+            },    {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    },
+                ]
+            },
+            {
+                pieceNumber: 7,
+                destinations: [
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 15,
+                        intervening: [10]
+                    },
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 11,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 14,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 2,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 6,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 9,
+                        intervening: []
+                    },
+                    {
+                        squareNumber: 10,
+                        ifCapturing: 10
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        squareNumber:1,
+        pieces:[
+            {
+                pieceNumber: 1,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 2,
+                destinations: [
+                    {
+                        squareNumber: 3,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 4,
+                destinations: [
+                    {
+                        squareNumber: 5,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 6,
+                destinations: [
+                    {
+                        squareNumber: 7,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 8,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 9,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            },
+            {
+                pieceNumber: 10,
+                destinations: [
+                    {
+                        squareNumber: 1,
+                        intervening: []
+                    }
+                ]
+            }
+        ]
+    }
 
 ]
 
